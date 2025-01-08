@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+ 
+
+
+</head>
+<body>
+ 
+   <div class="container mt-5">
+    <div class="form-container"> 
+      <div class="header-container">
+        <h2 class="mb-4">Payment Form Example</h2>
+      </div>
+        <div class="alert alert-danger" role="alert">
+          Some fields are missing
+        </div>
+  
+        <div class="row mb-3">
+            <!-- Card Number -->
+            <div class="col-md-6">
+              <label for="cardNumber" class="form-label">Card #</label>
+              <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX" maxlength="16">
+            </div>
+          
+            <!-- CVC -->
+            <div class="col-md-3">
+              <label for="cvc" class="form-label">CVC #</label>
+              <input type="number" class="form-control" id="cvc" placeholder="000" maxlength="3" min="100" max="999">
+            </div>
+          
+            <!-- Amount -->
+            <div class="col-md-3">
+              <label for="amount" class="form-label">Amount</label>
+              <input type="number" class="form-control" id="amount" placeholder="$ Amount" step="0.01" min="0">
+            </div>
+         </div>
+
+         <div class="row mb-3">
+            <!-- First Name -->
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+            
+            <!-- Last Name -->
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <!-- City -->
+            <div class="col-md-4">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+            
+            <!-- State -->
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state">
+                <option selected>Pick a state</option>
+                <option value="NY">New York</option>
+                <option value="CA">California</option>
+                <option value="TX">Texas</option>
+                <!-- Agrega más estados según sea necesario -->
+              </select>
+            </div>
+            
+            <!-- Postal Code -->
+            <div class="col-md-4">
+              <label for="postalCode" class="form-label">Postal Code</label>
+              <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" maxlength="10" inputmode="numeric">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">We accept:</label>
+              <div class="payment-methods d-flex align-items-center p-2">
+                <div class="payment-options bg-gray rounded">
+                  <!-- Visa -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa">
+                    <label class="form-check-label" for="visa">
+                      <i class="fab fa-cc-visa fa-2x"></i>
+                    </label>
+                  </div>
+                  <!-- Mastercard -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard">
+                    <label class="form-check-label" for="mastercard">
+                      <i class="fab fa-cc-mastercard fa-2x"></i>
+                    </label>
+                  </div>
+                  <!-- American Express -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="amex" value="amex">
+                    <label class="form-check-label" for="amex">
+                      <i class="fab fa-cc-amex fa-2x"></i>
+                    </label>
+                  </div>
+                  <!-- Discover -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="discover" value="discover">
+                    <label class="form-check-label" for="discover">
+                      <i class="fab fa-cc-discover fa-2x"></i>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!-- Mensaje Adicional -->
+            <div class="col-md-6">
+              <label for="message" class="form-label">Message</label>
+              <div class="form-group">
+                <textarea class="form-control" id="message" rows="3"></textarea>
+                <div class="text-muted" style="text-align: left; padding: 4px 12px;">Add any notes here.</div>
+              </div>
+            </div>
+            
+            
+            
+          </div>
+          <div class="form-group button-group">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+
+
+
+          
+
+
+
+          
+          
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+ 
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
